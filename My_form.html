@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Сайт майнор</title>
+    <style>
+        .nav-active {
+            background-color: #cc1c1c;
+            font-weight: bold;
+            color: #f7f5f8;
+            padding: 7px;
+            border-radius: 5px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #000;
+            padding: 7px;
+            display: block;
+        }
+        ul li a:hover {
+            background-color: #f34343;
+        }
+    </style>
+</head>
+<body>
+    <h1>The most famous UFC records</h1><p id="Real"></p>
+    <ul>
+        <li><a href="https://ufc.ru/" target="_blank">Ultimate Fighting Championship website</a></li>
+        <li><a href="https://ufc.ru/" target="_blank"><img src="https://i.pinimg.com/originals/c4/34/68/c43468d62ebe9cd5124db58d12fe46dd.jpg" height="30px"></a></li>
+        <li><a href="My_form.html" target="_blank" class="nav-active">Create my fighter</a></li>
+        <li><a href="team.html" target="_blank">Текущий состав</a></li>
+        <li><a href="index.html#Legends" target="_self">Легенды и их рекорды</a></li>
+        <li><a href="index.html#others" target="_self">Другие рекордсмены клуба</a></li>
+        <li><a href="index.html#Real" target="_self">Вернуться в начало</a></li>
+    </ul>
+
+    <br><br>
+
+    <h3 align="center">Create my fighter</h3>
+    <!--<form action="../../cgi-bin/form_action.py" method='get' target='_self'>-->
+    <!--<form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>-->
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank" align="center">
+        <p>Input your characteristics:<input type="hidden" name="q" value="search"></p>
+        <p>Name: <input type="Text" name="Name" size=20 value="Ilia Topuria"></p>
+        <p>Age: <input type="Number" name="Age" size=20 value="28"></p>
+        <p>Country: <input type="Text" name="Country" size=20 value="Georgia"></p>
+        <p>Weight Division: <input type="Text" name="Weight Division" size=20 value="Lightweight"></p>
+        <p>Boxing Offence: <input type="Number" name="Boxing Offence" size=20 value="0"></p>
+        <p>Boxing Defence: <input type="Number" name="Boxing Defence" size=20 value="0"></p>
+        <p>Kicks: <input type="Number" name="Kicks" size=20 value="0"></p>
+        <p>Grappling Offense: <input type="Number" name="Grappling Offense" size=20 value="0"></p>
+        <p>Grappling Defense: <input type="Number" name="Grappling Defense" size=20 value="0"></p>
+        <p>Power: <input type="Number" name="Power" size=20 value="0"></p>
+        <p>Durability: <input type="Number" name="Durability" size=20 value="0"></p>
+        <p>Dominant style:
+            <input type="Radio" name="place" value="Forward">Boxer
+            <input type="Radio" name="place" value="Midfielder" checked>Grappler
+            <input type="Radio" name="place" value="Defender">Wrestler
+            <input type="Radio" name="place" value="Goalkeeper" checked>Counterpuncher
+        </p>
+
+        <p>Accomplishments & records:
+            <input type="Checkbox" name="Accomplishment" value="10" checked>Most successful submissions
+            <input type="Checkbox" name="Accomplishment" value="20" checked>Most strikes landed
+            <input type="Checkbox" name="Accomplishment" value="30" checked>Fastest average fightime
+            <input type="Checkbox" name="Accomplishment" value="40" checked>BMF
+            <input type="Checkbox" name="Accomplishment" value="50" checked>Champion
+        </p>
+
+        <p id="UFC"> Дополнительная информация:
+            <br>
+            <TEXTAREA cols=80 rows=4 name="textarea"><Additional info></TEXTAREA>
+        </p>
+
+        <p>UFC Debut <input type="date" name="UFC Debut" value='2020-10-10'></p>
+        <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
+        <p>Favourite techique: <input type="Техт" name="Favourite techique" value="Right cross" size='30'></p>
+
+        <p>Relationship with fans:<select name="Relationship with fans">
+                <OPTION value="a">Fan-favourite</OPTION>
+                <OPTION value="w">Hated</OPTION>
+            </select></p>
+
+        <input type="hidden" name="function" value="page">
+        <input type="hidden" name="page_id" value="3">
+
+        <p>
+            <input type="Reset" name="Reset" value="Обновить">
+            <input type="Submit" name="submit" value="Отправить">
+        </p>
+    </form>
+</body>
+
+</html>
+
+
