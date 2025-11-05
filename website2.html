@@ -60,21 +60,6 @@
     </div>
 
     <script>
-        function showPage(pageId) {
-            document.getElementById('page1').style.display = 'none';
-            document.getElementById('page2').style.display = 'none';
-            document.getElementById('page3').style.display = 'none';
-            document.getElementById(pageId).style.display = 'block';
-        }
-        
-        function getData() {
-            const surname = document.querySelector('#passport p:nth-child(1) span').textContent;
-            const name = document.querySelector('#passport p:nth-child(2) span').textContent;
-            const year = document.querySelector('#passport p:nth-child(3) span').textContent;
-            
-            document.getElementById('result1').innerHTML = 
-                'Полученные данные: ' + surname + ', ' + name + ', ' + year;
-        }
         
         function convertToLatin() {
             const cyrillicToLatin = {
