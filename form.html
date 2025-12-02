@@ -119,13 +119,7 @@
         </div>
     </div>
 
-    <div class="container mt-4 mb-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="form-container">
-                    <h2 class="form-title text-center">Fighter Creation Form</h2>
-                    
-                     <h3 align="center">Create my fighter</h3>
+<h3 align="center">Create my fighter</h3>
     <form action="https://www.google.com/search?" id="UserEnter" name="UserEnter" target="_blank" align="center">
         <p>Input your characteristics:<input type="hidden" name="q" value="search"></p>
         <p>Name: <input type="Text" name="Name" size=20 value="Ilia Topuria"></p>
@@ -175,58 +169,5 @@
             <input type="Submit" name="submit" value="Submit">
         </p>
     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2025 UFC Finishes Fan Site</p>
-                    <p>Unofficial fan site</p>
-                </div>
-                <div class="col-md-6 text-end">
-                    <p>All logos and images belong to UFC</p>
-                    <a href="https://ufc.ru/" target="_blank" class="text-white">Official UFC Website</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        function updateSlider(elementId, value) {
-            document.getElementById(elementId).textContent = value;
-        }
-        
-        document.getElementById('fighterForm').addEventListener('submit', function(event) {
-            const age = document.querySelector('input[name="fighter_age"]').value;
-            const name = document.querySelector('input[name="fighter_name"]').value;
-            
-            if (age < 18 || age > 50) {
-                alert('Fighter age must be between 18 and 50 years!');
-                event.preventDefault();
-                return false;
-            }
-            
-            if (name.trim().length < 2) {
-                alert('Please enter a valid fighter name!');
-                event.preventDefault();
-                return false;
-            }
-            
-            alert('Fighter successfully created! Data sent to server.');
-        });
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            updateSlider('powerValue', 85);
-            updateSlider('defenseValue', 75);
-            updateSlider('staminaValue', 90);
-            updateSlider('grapplingValue', 65);
-        });
-    </script>
 </body>
 </html>
