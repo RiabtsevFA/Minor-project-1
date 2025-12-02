@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Создать бойца - UFC</title>
+    <title>Create Fighter - UFC</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -96,16 +96,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Главная</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="form.html">Создать бойца</a>
+                        <a class="nav-link active" href="form.html">Create Fighter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Upcoming Bouts.html">Предстоящие бои</a>
+                        <a class="nav-link" href="Upcoming Bouts.html">Upcoming Fights</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://ufc.ru/" target="_blank">Официальный сайт UFC</a>
+                        <a class="nav-link" href="https://ufc.ru/" target="_blank">Official UFC Website</a>
                     </li>
                 </ul>
             </div>
@@ -114,8 +114,8 @@
 
     <div class="jumbotron">
         <div class="container text-center">
-            <h1 class="display-4">Создайте своего бойца UFC</h1>
-            <p class="lead">Соберите идеального бойца смешанных единоборств</p>
+            <h1 class="display-4">Create Your UFC Fighter</h1>
+            <p class="lead">Build your perfect mixed martial arts fighter</p>
         </div>
     </div>
 
@@ -123,180 +123,180 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="form-container">
-                    <h2 class="form-title text-center">Форма создания бойца</h2>
+                    <h2 class="form-title text-center">Fighter Creation Form</h2>
                     
                     <form action="https://formspree.io/f/mjvzzlwy" method="POST" id="fighterForm">
-                        <!-- Основная информация -->
+                        <!-- Basic Information -->
                         <div class="row mb-4">
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Имя бойца *</label>
-                                <input type="text" class="form-control" name="fighter_name" value="Илья Топурия" required>
-                                <div class="form-text">Введите полное имя бойца</div>
+                                <label class="form-label">Fighter Name *</label>
+                                <input type="text" class="form-control" name="fighter_name" value="Ilia Topuria" required>
+                                <div class="form-text">Enter full fighter name</div>
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Возраст *</label>
+                                <label class="form-label">Age *</label>
                                 <input type="number" class="form-control" name="fighter_age" value="28" min="18" max="50" required>
-                                <div class="form-text">Возраст должен быть от 18 до 50 лет</div>
+                                <div class="form-text">Age must be between 18 and 50</div>
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Страна *</label>
-                                <input type="text" class="form-control" name="fighter_country" value="Грузия" required>
+                                <label class="form-label">Country *</label>
+                                <input type="text" class="form-control" name="fighter_country" value="Georgia" required>
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Весовая категория *</label>
+                                <label class="form-label">Weight Division *</label>
                                 <select class="form-select" name="weight_division" required>
-                                    <option value="Легчайший вес">Легчайший вес</option>
-                                    <option value="Легкий вес" selected>Легкий вес</option>
-                                    <option value="Полусредний вес">Полусредний вес</option>
-                                    <option value="Средний вес">Средний вес</option>
-                                    <option value="Полутяжелый вес">Полутяжелый вес</option>
-                                    <option value="Тяжелый вес">Тяжелый вес</option>
+                                    <option value="Bantamweight">Bantamweight</option>
+                                    <option value="Lightweight" selected>Lightweight</option>
+                                    <option value="Welterweight">Welterweight</option>
+                                    <option value="Middleweight">Middleweight</option>
+                                    <option value="Light Heavyweight">Light Heavyweight</option>
+                                    <option value="Heavyweight">Heavyweight</option>
                                 </select>
                             </div>
                         </div>
                         
                         <hr class="my-4">
                         
-                        <h4 class="mb-3">Боевая статистика</h4>
+                        <h4 class="mb-3">Fight Statistics</h4>
                         
                         <div class="row mb-4">
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Ударная мощь: <span id="powerValue" class="skill-value">85</span>/100</label>
+                                <label class="form-label">Striking Power: <span id="powerValue" class="skill-value">85</span>/100</label>
                                 <input type="range" class="form-range skill-slider" name="striking_power" min="0" max="100" value="85" oninput="updateSlider('powerValue', this.value)">
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Защита: <span id="defenseValue" class="skill-value">75</span>/100</label>
+                                <label class="form-label">Defense: <span id="defenseValue" class="skill-value">75</span>/100</label>
                                 <input type="range" class="form-range skill-slider" name="defense" min="0" max="100" value="75" oninput="updateSlider('defenseValue', this.value)">
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Выносливость: <span id="staminaValue" class="skill-value">90</span>/100</label>
+                                <label class="form-label">Stamina: <span id="staminaValue" class="skill-value">90</span>/100</label>
                                 <input type="range" class="form-range skill-slider" name="stamina" min="0" max="100" value="90" oninput="updateSlider('staminaValue', this.value)">
                             </div>
                             
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Борьба: <span id="grapplingValue" class="skill-value">65</span>/100</label>
+                                <label class="form-label">Grappling: <span id="grapplingValue" class="skill-value">65</span>/100</label>
                                 <input type="range" class="form-range skill-slider" name="grappling" min="0" max="100" value="65" oninput="updateSlider('grapplingValue', this.value)">
                             </div>
                         </div>
                         
                         <hr class="my-4">
                         
-                        <h4 class="mb-3">Основной боевой стиль *</h4>
+                        <h4 class="mb-3">Main Fighting Style *</h4>
                         <div class="row mb-4">
                             <div class="col-md-3 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="fighting_style" id="style1" value="Ударник" checked>
+                                    <input class="form-check-input" type="radio" name="fighting_style" id="style1" value="Striker" checked>
                                     <label class="form-check-label" for="style1">
-                                        Ударник
+                                        Striker
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-3 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="fighting_style" id="style2" value="Борец">
+                                    <input class="form-check-input" type="radio" name="fighting_style" id="style2" value="Grappler">
                                     <label class="form-check-label" for="style2">
-                                        Борец
+                                        Grappler
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-3 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="fighting_style" id="style3" value="Универсал">
+                                    <input class="form-check-input" type="radio" name="fighting_style" id="style3" value="All-rounder">
                                     <label class="form-check-label" for="style3">
-                                        Универсал
+                                        All-rounder
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-3 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="fighting_style" id="style4" value="Контрпанчер">
+                                    <input class="form-check-input" type="radio" name="fighting_style" id="style4" value="Counter-puncher">
                                     <label class="form-check-label" for="style4">
-                                        Контрпанчер
+                                        Counter-puncher
                                     </label>
                                 </div>
                             </div>
                         </div>
                         
-                        <h4 class="mb-3">Достижения</h4>
+                        <h4 class="mb-3">Achievements</h4>
                         <div class="row mb-4">
                             <div class="col-md-4 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach1" value="Чемпион UFC" checked>
+                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach1" value="UFC Champion" checked>
                                     <label class="form-check-label" for="ach1">
-                                        Чемпион UFC
+                                        UFC Champion
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach2" value="Награда за выступление" checked>
+                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach2" value="Performance Bonus" checked>
                                     <label class="form-check-label" for="ach2">
-                                        Награда за выступление
+                                        Performance Bonus
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach3" value="Рекорд нокаутов">
+                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach3" value="Knockout Record">
                                     <label class="form-check-label" for="ach3">
-                                        Рекорд нокаутов
+                                        Knockout Record
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach4" value="Непобежденный">
+                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach4" value="Undefeated">
                                     <label class="form-check-label" for="ach4">
-                                        Непобежденный
+                                        Undefeated
                                     </label>
                                 </div>
                             </div>
                             <div class="col-md-4 mb-2">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach5" value="Боец года">
+                                    <input class="form-check-input" type="checkbox" name="achievements" id="ach5" value="Fighter of the Year">
                                     <label class="form-check-label" for="ach5">
-                                        Боец года
+                                        Fighter of the Year
                                     </label>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="mb-4">
-                            <label class="form-label">Дополнительная информация о бойце</label>
-                            <textarea class="form-control" name="additional_info" rows="4">Опытный боец с отличными ударными навыками и хорошей защитой. Специализируется на боксерской технике.</textarea>
+                            <label class="form-label">Additional Information About Fighter</label>
+                            <textarea class="form-control" name="additional_info" rows="4">Experienced fighter with excellent striking skills and good defense. Specializes in boxing technique.</textarea>
                         </div>
                         
-                        <!-- Дебют в UFC -->
+                        <!-- UFC Debut -->
                         <div class="mb-4">
-                            <label class="form-label">Дата дебюта в UFC *</label>
+                            <label class="form-label">UFC Debut Date *</label>
                             <input type="date" class="form-control" name="ufc_debut" value="2020-10-10" required>
                         </div>
                         
-                        <!-- Любимый прием -->
+                        <!-- Favorite Move -->
                         <div class="mb-4">
-                            <label class="form-label">Любимый прием *</label>
-                            <input type="text" class="form-control" name="signature_move" value="Правый кросс" required>
+                            <label class="form-label">Favorite Move *</label>
+                            <input type="text" class="form-control" name="signature_move" value="Right Cross" required>
                         </div>
                         
-                        <!-- Отношение с фанатами -->
+                        <!-- Relationship with Fans -->
                         <div class="mb-4">
-                            <label class="form-label">Отношение с фанатами</label>
+                            <label class="form-label">Relationship with Fans</label>
                             <select class="form-select" name="fan_relationship">
-                                <option value="Любимчик фанатов">Любимчик фанатов</option>
-                                <option value="Нейтральное">Нейтральное</option>
-                                <option value="Хейтер">Хейтер</option>
+                                <option value="Fan Favorite">Fan Favorite</option>
+                                <option value="Neutral">Neutral</option>
+                                <option value="Hated">Hated</option>
                             </select>
                         </div>
                         
-                        <!-- Кнопки -->
+                        <!-- Buttons -->
                         <div class="d-flex justify-content-between mt-5">
-                            <button type="reset" class="btn btn-outline-secondary">Сбросить форму</button>
-                            <button type="submit" class="btn btn-submit">Отправить бойца</button>
+                            <button type="reset" class="btn btn-outline-secondary">Reset Form</button>
+                            <button type="submit" class="btn btn-submit">Submit Fighter</button>
                         </div>
                     </form>
                 </div>
@@ -309,11 +309,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>&copy; 2025 UFC Finishes Fan Site</p>
-                    <p>Неофициальный фанатский сайт</p>
+                    <p>Unofficial fan site</p>
                 </div>
                 <div class="col-md-6 text-end">
-                    <p>Все права на логотипы и изображения принадлежат UFC</p>
-                    <a href="https://ufc.ru/" target="_blank" class="text-white">Официальный сайт UFC</a>
+                    <p>All logos and images belong to UFC</p>
+                    <a href="https://ufc.ru/" target="_blank" class="text-white">Official UFC Website</a>
                 </div>
             </div>
         </div>
@@ -331,18 +331,18 @@
             const name = document.querySelector('input[name="fighter_name"]').value;
             
             if (age < 18 || age > 50) {
-                alert('Возраст бойца должен быть от 18 до 50 лет!');
+                alert('Fighter age must be between 18 and 50 years!');
                 event.preventDefault();
                 return false;
             }
             
             if (name.trim().length < 2) {
-                alert('Введите корректное имя бойца!');
+                alert('Please enter a valid fighter name!');
                 event.preventDefault();
                 return false;
             }
             
-            alert('Боец успешно создан! Данные отправлены на сервер.');
+            alert('Fighter successfully created! Data sent to server.');
         });
         
         document.addEventListener('DOMContentLoaded', function() {
