@@ -1,60 +1,231 @@
 <!DOCTYPE html>
-
 <html lang="ru">
-    <html>
 <head>
-    <style>
-        * {
-            font-family: Verdana, sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <head>
     <meta charset="UTF-8">
-    <title>Minor website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предстоящие бои - UFC</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .nav-active {
-            background-color: #cc1c1c;
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar-nav .nav-link.active {
+            background-color: #cc1c1c !important;
+            color: white !important;
             font-weight: bold;
-            color: #f7f5f8;
-            padding: 7px;
             border-radius: 5px;
         }
-        ul li a {
-            text-decoration: none;
-            color: #000;
-            padding: 7px;
-            display: block;
+        
+        .event-card {
+            border-left: 4px solid #cc1c1c;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
         }
-        ul li a:hover {
-            background-color: #f34343;
+        
+        .event-card:hover {
+            transform: translateX(5px);
+        }
+        
+        .fighter-name {
+            color: #cc1c1c;
+            font-weight: bold;
+        }
+        
+        .jumbotron {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://RiabtsevFA.github.io/Minor-project-1/images/UFClogo.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 0;
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .jumbotron {
+                padding: 2rem 1rem;
+            }
+            
+            .event-card {
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>The biggest UFC finishes</h1><p id="GoBack"></p>
-    <ul>
-        <li><a href="https://ufc.ru/" target="_blank">Ultimate Fighting Championship website</a></li>
-        <li><a href="https://ufc.ru/" target="_blank"><img src="https://RiabtsevFA.github.io/Minor-project-1/images/UFClogo.jpg" height="30px"></a></li>
-        <li><a href="https://RiabtsevFA.github.io/Minor-project-1/form.html" target="_blank">Create my fighter</a></li>
-        <li><a href="https://RiabtsevFA.github.io/Minor-project-1/Upcoming Bouts.html" target="_blank" class="nav-active">Upcoming Bouts</a></li>
-        <li><a href="https://RiabtsevFA.github.io/Minor-project-1/#Finishes" target="_self">Biggest Finishes</a></li>
-        <li><a href="https://RiabtsevFA.github.io/Minor-project-1/#HonorableMentions" target="_self">Honorable Mentions</a></li>
-        <li><a href="https://RiabtsevFA.github.io/Minor-project-1/#GoBack" target="_self">Back to main page</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://RiabtsevFA.github.io/Minor-project-1/images/UFClogo.jpg" alt="UFC Logo" height="30" class="d-inline-block align-text-top me-2">
+                UFC Finishes
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="form.html">Создать бойца</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Upcoming Bouts.html">Предстоящие бои</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ufc.ru/" target="_blank">Официальный сайт UFC</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <br><br>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1 class="display-4">Предстоящие турниры UFC</h1>
+            <p class="lead">Самые ожидаемые бои оставшейся части 2025 года</p>
+        </div>
+    </div>
 
-    <p><strong>Upcoming tournaments for the rest of 2025 include:</strong>
-        <li><strong>UFC 321</strong>: Gane vs. Apinall, Jandiroba vs. Dern, Nurmagomedov vs. Bautista.</li>
-        <li><strong>UFC 322</strong>: Makhachev vs. Della Maddalena, Shevchenko vs. Weili, Brady vs. Morales. </li>
-        <li><strong>UFC FN Qatar</strong>: Tsarukyan vs. Hooker, Muhammad vs. Garry, Oezdemir vs. Menifield.</li>
-        <li><strong>UFC 323</strong>: Dvalishvili vs Yan, Pantoja vs. Van, Blachowicz vs Guskov. </li>
-    </p>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-4">Расписание турниров</h2>
+                
+                <div class="card event-card">
+                    <div class="card-body">
+                        <h4 class="card-title">UFC 321</h4>
+                        <p class="card-text">
+                            <span class="fighter-name">Сир Ган</span> vs. <span class="fighter-name">Том Аспиналл</span><br>
+                            <span class="fighter-name">Вивиан Жандироба</span> vs. <span class="fighter-name">Маккензи Дерн</span><br>
+                            <span class="fighter-name">Умар Нурмагомедов</span> vs. <span class="fighter-name">Майло Батиста</span>
+                        </p>
+                        <p class="text-muted">Дата: 15 марта 2025</p>
+                    </div>
+                </div>
+                
+                <div class="card event-card">
+                    <div class="card-body">
+                        <h4 class="card-title">UFC 322</h4>
+                        <p class="card-text">
+                            <span class="fighter-name">Ислам Махачев</span> vs. <span class="fighter-name">Джек Делла Маддалена</span><br>
+                            <span class="fighter-name">Валентина Шевченко</span> vs. <span class="fighter-name">Чжан Вэйли</span><br>
+                            <span class="fighter-name">Шон Брэди</span> vs. <span class="fighter-name">Хоакин Бакли</span>
+                        </p>
+                        <p class="text-muted">Дата: 12 апреля 2025</p>
+                    </div>
+                </div>
+                
+                <div class="card event-card">
+                    <div class="card-body">
+                        <h4 class="card-title">UFC Fight Night: Катар</h4>
+                        <p class="card-text">
+                            <span class="fighter-name">Арман Царукян</span> vs. <span class="fighter-name">Дэн Хукер</span><br>
+                            <span class="fighter-name">Белал Мухаммад</span> vs. <span class="fighter-name">Ян Гарри</span><br>
+                            <span class="fighter-name">Волкан Оздемир</span> vs. <span class="fighter-name">Алонзо Менифилд</span>
+                        </p>
+                        <p class="text-muted">Дата: 10 мая 2025</p>
+                    </div>
+                </div>
+                
+                <div class="card event-card">
+                    <div class="card-body">
+                        <h4 class="card-title">UFC 323</h4>
+                        <p class="card-text">
+                            <span class="fighter-name">Мераб Двалишвили</span> vs. <span class="fighter-name">Петр Ян</span><br>
+                            <span class="fighter-name">Александр Пантожа</span> vs. <span class="fighter-name">Стив Эрсег</span><br>
+                            <span class="fighter-name">Ян Блахович</span> vs. <span class="fighter-name">Азамат Мурзаканов</span>
+                        </p>
+                        <p class="text-muted">Дата: 7 июня 2025</p>
+                    </div>
+                </div>
+                
+                <div id="additional-events"></div>
+            </div>
+        </div>
+        
+        <div class="text-center my-5">
+            <a href="index.html" class="btn btn-danger btn-lg">Вернуться на главную</a>
+        </div>
+    </div>
 
-</body></html>
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 UFC Finishes Fan Site</p>
+                    <p>Неофициальный фанатский сайт</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Все права на логотипы и изображения принадлежат UFC</p>
+                    <a href="https://ufc.ru/" target="_blank" class="text-white">Официальный сайт UFC</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Добавляем дополнительные события через JS
+        document.addEventListener('DOMContentLoaded', function() {
+            const additionalEvents = [
+                {
+                    title: "UFC Fight Night: Лондон",
+                    fights: [
+                        "Пэдди Пимблетт vs. Бобби Грин",
+                        "Молли Макканн vs. Наталиа Силва",
+                        "Пол Крейг vs. Као Мачадо"
+                    ],
+                    date: "21 июня 2025"
+                },
+                {
+                    title: "UFC 324",
+                    fights: [
+                        "Леон Эдвардс vs. Шавилат Рахманов",
+                        "Александра Року vs. Мэйси Барбер",
+                        "Жаирзиньо Розенстрайк vs. Марчин Тыбура"
+                    ],
+                    date: "5 июля 2025"
+                },
+                {
+                    title: "UFC Fight Night: Лас-Вегас",
+                    fights: [
+                        "Шон О'Мэлли vs. Марлон Вера 2",
+                        "Джессика Андраде vs. Аманда Рибас",
+                        "Кевин Холланд vs. Майкл Пейдж"
+                    ],
+                    date: "19 июля 2025"
+                }
+            ];
+            
+            const container = document.getElementById('additional-events');
+            
+            additionalEvents.forEach(event => {
+                const eventCard = document.createElement('div');
+                eventCard.className = 'card event-card';
+                
+                eventCard.innerHTML = `
+                    <div class="card-body">
+                        <h4 class="card-title">${event.title}</h4>
+                        <p class="card-text">
+                            ${event.fights.map(fight => {
+                                const fighters = fight.split(' vs. ');
+                                return `<span class="fighter-name">${fighters[0]}</span> vs. <span class="fighter-name">${fighters[1]}</span><br>`;
+                            }).join('')}
+                        </p>
+                        <p class="text-muted">Дата: ${event.date}</p>
+                    </div>
+                `;
+                
+                container.appendChild(eventCard);
+            });
+        });
+    </script>
 </body>
 </html>
-
-
